@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -35,46 +35,69 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero hero-split">
     <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-badge">Malaysia's One-Stop Business Partner</div>
-      <h1>Integrated Workforce, Technology &amp; Business Solutions</h1>
-      <p class="hero-sub">We combine manpower, AI technology, digital marketing, ERP integration, and global trade to help your business grow smarter and faster.</p>
-      <div class="hero-actions">
-        <a href="services.html" class="btn btn-primary btn-lg">Explore Our Services</a>
-        <a href="contact.html" class="btn btn-outline btn-lg">Talk to Us</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badge">Malaysia's One-Stop Business Partner</div>
+        <h1>Integrated Workforce, Technology &amp; Business Solutions</h1>
+        <p class="hero-sub">We combine manpower, AI technology, digital marketing, ERP integration, and global trade to help your business grow smarter and faster.</p>
+        <div class="hero-actions">
+          <a href="services.html" class="btn btn-accent btn-lg">Explore Our Services</a>
+          <a href="contact.html" class="btn btn-outline btn-lg">Talk to Us</a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-label">Serving</span>
+          <span>🏭 Manufacturing</span>
+          <span>🏗️ Construction</span>
+          <span>🚚 Logistics</span>
+          <span>🛒 Retail</span>
+          <span>🍽️ F&amp;B</span>
+        </div>
       </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll to explore</span>
-      <div class="scroll-arrow"></div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit-stage">
+          <div class="orbit-ring ring-outer"></div>
+          <div class="orbit-ring ring-inner"></div>
+          <div class="orbit-core">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><ellipse cx="40" cy="40" rx="34" ry="14" fill="none" stroke="rgba(255,255,255,0.92)" stroke-width="4.5" transform="rotate(-25 40 40)"/><circle cx="40" cy="40" r="10" fill="#f59340"/><circle cx="68" cy="24" r="6" fill="#ffffff"/><circle cx="13" cy="55" r="4.5" fill="rgba(255,255,255,0.65)"/></svg>
+          </div>
+          <span class="orbit-chip oc-1">👥 HR Supply</span>
+          <span class="orbit-chip oc-2">🤖 AI Technology</span>
+          <span class="orbit-chip oc-3">📣 Marketing</span>
+          <span class="orbit-chip oc-4">🔗 ERP Systems</span>
+          <span class="orbit-chip oc-5">🌏 Import &amp; Export</span>
+          <span class="orbit-chip oc-6">💼 Consultancy</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section class="stats-bar">
-    <div class="container stats-grid">
-      <div class="stat-item">
-        <div class="stat-number">6+</div>
-        <div class="stat-label">Core Services</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">10+</div>
-        <div class="stat-label">Industries Served</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">MY &amp; INT'L</div>
-        <div class="stat-label">Market Reach</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">360°</div>
-        <div class="stat-label">Business Support</div>
+  <!-- Stats: floating card -->
+  <section class="stats-bar stats-float">
+    <div class="container">
+      <div class="stats-card">
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="6">0</span>+</div>
+          <div class="stat-label">Core Services</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="10">0</span>+</div>
+          <div class="stat-label">Industries Served</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="360">0</span>°</div>
+          <div class="stat-label">Business Support</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">MY &amp; INT'L</div>
+          <div class="stat-label">Market Reach</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Overview -->
+  <!-- Services Overview: bento grid -->
   <section class="section services-overview">
     <div class="container">
       <div class="section-header">
@@ -82,21 +105,21 @@
         <h2>Your Partner for Every Business Need</h2>
         <p>From hiring the right people to deploying the right technology — we handle the complexity so you can focus on growth.</p>
       </div>
-      <div class="services-grid">
-        <a href="services.html#hr" class="service-card">
+      <div class="services-grid bento">
+        <a href="services.html#hr" class="service-card featured">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3>Human Resource Supply</h3>
-          <p>Reliable manpower, contract staffing, and workforce management solutions tailored to your operational needs.</p>
+          <p>Reliable manpower, contract staffing, and workforce management solutions tailored to your operational needs. From production-line workers to skilled specialists, deployed fast and managed well.</p>
           <span class="card-link">Learn more →</span>
         </a>
-        <a href="services.html#ai" class="service-card">
+        <a href="services.html#ai" class="service-card featured">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="3"/><path d="M6 10h1M17 10h1M12 6v1M12 13v1"/></svg>
           </div>
           <h3>AI Technology Solutions</h3>
-          <p>Adopt AI tools, automation, chatbots, and smart digital systems to boost productivity and cut manual effort.</p>
+          <p>Adopt AI tools, automation, chatbots, and smart digital systems to boost productivity and cut manual effort. Practical AI that pays for itself — not hype.</p>
           <span class="card-link">Learn more →</span>
         </a>
         <a href="services.html#marketing" class="service-card">
@@ -104,7 +127,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
           <h3>Online Marketing</h3>
-          <p>Social media, SEO, paid ads, content creation, and branding to grow your online presence and generate leads.</p>
+          <p>Social media, SEO, paid ads, and branding to grow your presence and generate leads.</p>
           <span class="card-link">Learn more →</span>
         </a>
         <a href="services.html#erp" class="service-card">
@@ -112,7 +135,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/></svg>
           </div>
           <h3>ERP &amp; System Integration</h3>
-          <p>Connect your business software, automate workflows, and integrate ERP, CRM, and inventory systems seamlessly.</p>
+          <p>Connect your software, automate workflows, and integrate ERP, CRM, and inventory seamlessly.</p>
           <span class="card-link">Learn more →</span>
         </a>
         <a href="services.html#trading" class="service-card">
@@ -120,7 +143,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
           <h3>Import &amp; Export Trading</h3>
-          <p>Product sourcing, supplier coordination, logistics management, and support for cross-border trade opportunities.</p>
+          <p>Product sourcing, supplier coordination, logistics, and cross-border trade support.</p>
           <span class="card-link">Learn more →</span>
         </a>
         <a href="services.html#consultancy" class="service-card">
@@ -128,9 +151,42 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           </div>
           <h3>Business Consultancy</h3>
-          <p>Advisory, operations support, project coordination, and market expansion assistance for sustainable business growth.</p>
+          <p>Advisory, operations support, and market expansion assistance for sustainable growth.</p>
           <span class="card-link">Learn more →</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="section process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How We Work</span>
+        <h2>From First Call to Full Support</h2>
+        <p>A simple, transparent process — you always know what happens next.</p>
+      </div>
+      <div class="process-strip">
+        <div class="process-step">
+          <div class="process-num">1</div>
+          <h3>Consult</h3>
+          <p>We listen first. A free consultation to understand your business, challenges, and goals.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">2</div>
+          <h3>Propose</h3>
+          <p>A clear proposal scoped to your budget — no generic packages, no hidden costs.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">3</div>
+          <h3>Deploy</h3>
+          <p>Our team delivers — staff placed, systems integrated, campaigns launched.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">4</div>
+          <h3>Support</h3>
+          <p>Ongoing monitoring, optimisation, and support as your business evolves.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -174,24 +230,19 @@
         </ul>
         <a href="about.html" class="btn btn-primary">About Our Company</a>
       </div>
-      <div class="why-visual">
-        <div class="visual-card vc-1">
-          <div class="vc-icon">🤝</div>
-          <div>Trusted Business Partner</div>
+      <div class="why-visual why-orbit" aria-hidden="true">
+        <div class="wo-ring wo-ring-1"></div>
+        <div class="wo-ring wo-ring-2"></div>
+        <div class="wo-ring wo-ring-3"></div>
+        <div class="wo-core">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><ellipse cx="40" cy="40" rx="34" ry="14" fill="none" stroke="#0a4f8f" stroke-width="4.5" transform="rotate(-25 40 40)"/><circle cx="40" cy="40" r="10" fill="#e8761a"/><circle cx="68" cy="24" r="6" fill="#0a4f8f"/><circle cx="13" cy="55" r="4.5" fill="#1a6bb5"/></svg>
         </div>
-        <div class="visual-card vc-2">
-          <div class="vc-icon">🚀</div>
-          <div>Fast Implementation</div>
-        </div>
-        <div class="visual-card vc-3">
-          <div class="vc-icon">🌏</div>
-          <div>Malaysia &amp; International</div>
-        </div>
-        <div class="visual-card vc-4">
-          <div class="vc-icon">⚙️</div>
-          <div>End-to-End Support</div>
-        </div>
-        <div class="visual-orb"></div>
+        <div class="wo-dot wd-1">👥</div>
+        <div class="wo-dot wd-2">🤖</div>
+        <div class="wo-dot wd-3">📣</div>
+        <div class="wo-dot wd-4">🔗</div>
+        <div class="wo-dot wd-5">🌏</div>
+        <div class="wo-dot wd-6">💼</div>
       </div>
     </div>
   </section>
@@ -229,10 +280,11 @@
         <h2>What Our Clients Say</h2>
         <p>Businesses across Malaysia trust Onestop Zone to help them grow, operate efficiently, and reach new markets.</p>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
+      <div class="testimonials-grid asym">
+        <div class="testimonial-card featured">
+          <div class="testimonial-quote">"</div>
           <div class="testimonial-stars">★★★★★</div>
-          <p>"Onestop Zone helped us set up our entire ERP system and integrate it with our existing inventory tools. The process was smooth and the team was very responsive throughout."</p>
+          <p>"Onestop Zone helped us set up our entire ERP system and integrate it with our existing inventory tools. The process was smooth and the team was very responsive throughout. Having one partner who understands both our operations and our technology made all the difference."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">A</div>
             <div>
@@ -243,7 +295,7 @@
         </div>
         <div class="testimonial-card">
           <div class="testimonial-stars">★★★★★</div>
-          <p>"Their digital marketing team grew our social media following and doubled our online leads within 3 months. Very professional and results-driven team."</p>
+          <p>"Their digital marketing team grew our social media following and doubled our online leads within 3 months. Very professional and results-driven."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">S</div>
             <div>

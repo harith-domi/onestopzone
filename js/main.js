@@ -48,8 +48,36 @@ if (form) {
   });
 }
 
+// Stat count-up animation
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const countEls = document.querySelectorAll('[data-count]');
+if (countEls.length) {
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      countObserver.unobserve(el);
+      if (prefersReducedMotion) {
+        el.textContent = target;
+        return;
+      }
+      const duration = 1200;
+      const start = performance.now();
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased);
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.5 });
+  countEls.forEach(el => countObserver.observe(el));
+}
+
 // Scroll-reveal animation
-const revealEls = document.querySelectorAll('.service-card, .mv-card, .industry-card, .contact-info-card, .about-feature');
+const revealEls = document.querySelectorAll('.service-card, .mv-card, .industry-card, .contact-info-card, .about-feature, .process-step, .testimonial-card, .stats-card');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
