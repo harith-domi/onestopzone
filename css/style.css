@@ -152,6 +152,14 @@ a { text-decoration: none; color: inherit; }
   font-weight: 800;
   letter-spacing: -0.5px;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
 }
 .logo-primary { color: var(--primary); }
 .logo-accent { color: var(--accent); }
