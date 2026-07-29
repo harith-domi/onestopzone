@@ -1880,3 +1880,29 @@ h1, h2, h3, .logo, .stat-number, .process-num {
   .orbit-core { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+/* =============================================
+   OSZ BRAND LOGO (official mark)
+   ============================================= */
+
+.logo-mark { width: 42px; height: 42px; }
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.12;
+}
+.logo-primary {
+  color: #152c52;
+  font-size: 1.18rem;
+  letter-spacing: -0.4px;
+}
+.logo-sub {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #1aa7d4;
+  letter-spacing: 0.06em;
+}
+.footer-brand .logo-light .logo-primary { color: #ffffff; }
+.footer-brand .logo-light .logo-sub { color: #45cfee; }
+.orbit-core .core-mark { width: 88px; height: 88px; }
+.wo-core .core-mark { width: 72px; height: 72px; }
