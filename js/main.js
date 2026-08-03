@@ -19,14 +19,12 @@ if (hamburger && navLinks) {
 }
 
 // Active nav link
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const currentPath = (window.location.pathname.replace(/\/(index(\.html)?)?$/, '') || '/')
+  .replace(/\.html$/, '');
 document.querySelectorAll('.nav-links a').forEach(link => {
-  const href = link.getAttribute('href').split('#')[0];
-  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-    link.classList.add('active');
-  } else {
-    link.classList.remove('active');
-  }
+  const href = link.getAttribute('href').split('#')[0].replace(/\.html$/, '') || '/';
+  const normalized = currentPath === '' ? '/' : currentPath;
+  link.classList.toggle('active', href === normalized);
 });
 
 // Contact form submission (front-end only)
